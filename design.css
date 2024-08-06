@@ -1,144 +1,166 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family:"Poppins","sans-serif"
-    
+    font-family: "Poppins", sans-serif;
 }
-body{
-    width:100%;
-    min-height: 100vh;
-    background-color: liner-gradient( 
-    #e9c4ec,#e8bce8);
-    padding: 10px;
-    background-image: linear-gradient(to right,
-     #8e2de2, #4a00e0)
-}
-.ToDo-app{
+
+body {
     width: 100%;
-    max-width: 50%;
-    background:#fff;
-    margin: 150px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 60px;
-    box-shadow: 0 0 20px #afafaf;
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    padding: 10px;
 }
-h2{
+
+.ToDo-app {
+    width: 90%; /* Adjusted for better responsiveness on smaller screens */
+    max-width: 600px; /* Fixed maximum width */
+    background: #fff;
+    margin: 20px auto; /* Adjusted margins for smaller screens */
+    padding: 30px 20px; /* Adjusted padding for smaller screens */
+    border-radius: 20px; /* Reduced border radius for better mobile aesthetics */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
     color: grey;
+    font-size: 24px; /* Adjusted for better mobile view */
+    margin-bottom: 30px; /* Adjusted margin */
+    text-align: center;
+    position: relative;
+}
+
+h2 img {
+    height: 30px; /* Adjusted for better mobile view */
+    width: 30px;
+    position: absolute;
+    right: 20px; /* Adjusted for better alignment */
+}
+
+.row {
     display: flex;
     align-items: center;
-    font-size: 30px;
-    margin-bottom: 50px;
-    position: relative;
+    justify-content: space-between;
+    outline: 2px groove #000000;
+    outline-offset: 4px;
+    border-radius: 20px; /* Adjusted border radius for mobile */
+    padding: 10px; /* Adjusted padding */
+    margin-bottom: 20px; /* Adjusted margin */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 18px; /* Adjusted for better readability */
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px; /* Adjusted padding */
     text-align: center;
 }
-h2 img{
-    height: 40px;
-    width: 40px;
-    position: absolute;
-    right: 0;
-}
-.row{
-    display: flex;
-    align-items:center;
-    justify-content:space-between;
-    outline: 3px groove #000000;
-    outline-offset: 5px;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-    box-shadow: 0 0 10px #657269;
-    
-    
-}
-input{
-   flex:1;
-   border: none;
-   outline: none;
-   background: transparent;
-   font-size:20px;
-   font-weight: 600;
-   letter-spacing: 1px;
-   padding: 10px;
-   text-align: center;
 
-}
-button{
+button {
     background-color: #8a1ea9;
     color: #fff;
-    height: 50px;
+    height: 45px; /* Adjusted height for mobile */
     width: 100px;
-    font-size: 18px;
-    font-weight: 100;
-    border-width: 5px;
+    font-size: 16px; /* Adjusted font size */
+    font-weight: 600; /* Adjusted weight for better readability */
+    border-width: 3px; /* Adjusted border width */
     border-color: black rgb(229, 196, 255);
-    border-radius: 20px;
+    border-radius: 15px; /* Adjusted border radius */
     cursor: pointer;
-    margin: 1px;
-    
+    margin: 5px; /* Adjusted margin */
 }
+
 button:hover {
-    transform: scale(1.2);
-
+    transform: scale(1.1); /* Adjusted scale factor */
 }
 
-input::placeholder{
+input::placeholder {
     color: #8a1ea9;
-    
 }
-[placeholder]:focus::-webkit-input-placeholder {
-    transition: opacity 0.1s 0.1s ease; 
-    opacity: 40%;
-  }
 
-ul li{
-    list-style:none;
-    font-size: 20px;
+ul li {
+    list-style: none;
+    font-size: 18px; /* Adjusted font size */
     font-weight: 500;
     letter-spacing: 1px;
-    padding: 12px 8px 12px 50px;
+    padding: 10px 8px 10px 40px; /* Adjusted padding */
     user-select: none;
-    cursor:pointer;
+    cursor: pointer;
     position: relative;
-    margin-block: 10px;
+    margin: 8px 0; /* Adjusted margin */
 }
-ul li::before{
-    content:'';
+
+ul li::before {
+    content: '';
     position: absolute;
-    height:30px;
-    width:30px;
+    height: 24px; /* Adjusted size */
+    width: 24px;
     border-radius: 50%;
     background: url(images/unchecked.png);
-    background-size:cover;
-    position:center;
-    top:12px;
-    left:8px;
-     
+    background-size: cover;
+    top: 10px; /* Adjusted positioning */
+    left: 8px;
 }
-ul li.checked{
+
+ul li.checked {
     background-color: #c96ce3;
     color: #fff;
-    border-radius: 50px;
+    border-radius: 20px; /* Adjusted border radius */
 }
-ul li.checked::before{
-    background:url(images/checked.png);
-    background-size: cover;
 
+ul li.checked::before {
+    background: url(images/checked.png);
+    background-size: cover;
 }
-ul li span{
+
+ul li span {
     position: absolute;
-    top:10px;
-    right:0px;
-    margin-right: 3px;
-    width: 30px;
-    line-height:30px;
-    font-size: 30px;
+    top: 5px; /* Adjusted positioning */
+    right: 5px; /* Adjusted positioning */
+    width: 24px; /* Adjusted size */
+    line-height: 24px;
+    font-size: 24px; /* Adjusted font size */
     text-align: center;
     border-radius: 50%;
-
+    cursor: pointer;
 }
-ul li span:hover{
-    
+
+ul li span:hover {
     background: #ffffff;
     color: #010101;
+}
+
+@media (max-width: 600px) {
+    .ToDo-app {
+        margin: 10px auto;
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    button {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding: 8px 8px 8px 35px;
+    }
+
+    ul li span {
+        font-size: 20px;
+    }
 }
