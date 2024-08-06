@@ -13,28 +13,28 @@ body {
 }
 
 .ToDo-app {
-    width: 90%; /* Adjusted for better responsiveness on smaller screens */
-    max-width: 600px; /* Fixed maximum width */
+    width: 90%; 
+    max-width: 600px; 
     background: #fff;
-    margin: 20px auto; /* Adjusted margins for smaller screens */
-    padding: 30px 20px; /* Adjusted padding for smaller screens */
-    border-radius: 20px; /* Reduced border radius for better mobile aesthetics */
+    margin: 20px auto; 
+    padding: 30px 20px; 
+    border-radius: 20px; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     color: grey;
-    font-size: 24px; /* Adjusted for better mobile view */
-    margin-bottom: 30px; /* Adjusted margin */
+    font-size: 24px; 
+    margin-bottom: 30px; 
     text-align: center;
     position: relative;
 }
 
 h2 img {
-    height: 30px; /* Adjusted for better mobile view */
+    height: 30px; 
     width: 30px;
     position: absolute;
-    right: 20px; /* Adjusted for better alignment */
+    right: 20px; 
 }
 
 .row {
@@ -43,9 +43,9 @@ h2 img {
     justify-content: space-between;
     outline: 2px groove #000000;
     outline-offset: 4px;
-    border-radius: 20px; /* Adjusted border radius for mobile */
-    padding: 10px; /* Adjusted padding */
-    margin-bottom: 20px; /* Adjusted margin */
+    border-radius: 20px; 
+    padding: 10px; 
+    margin-bottom: 20px; 
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -54,67 +54,68 @@ input {
     border: none;
     outline: none;
     background: transparent;
-    font-size: 18px; /* Adjusted for better readability */
+    font-size: 18px; 
     font-weight: 600;
     letter-spacing: 1px;
-    padding: 8px; /* Adjusted padding */
+    padding: 8px; 
     text-align: center;
 }
 
 button {
     background-color: #8a1ea9;
     color: #fff;
-    height: 45px; /* Adjusted height for mobile */
+    height: 45px; 
     width: 100px;
-    font-size: 16px; /* Adjusted font size */
-    font-weight: 600; /* Adjusted weight for better readability */
-    border-width: 3px; /* Adjusted border width */
+    font-size: 16px; 
+    font-weight: 600; 
+    border-width: 3px; 
     border-color: black rgb(229, 196, 255);
-    border-radius: 15px; /* Adjusted border radius */
+    border-radius: 15px; 
     cursor: pointer;
-    margin: 5px; /* Adjusted margin */
+    margin: 5px; 
 }
 
 button:hover {
-    transform: scale(1.1); /* Adjusted scale factor */
+    transform: scale(1.1); 
+}
+button {
+    height: 40px;
+    font-size: 14px;
+    max-width: 100%; 
 }
 
 input::placeholder {
     color: #8a1ea9;
 }
-[placeholder]:focus::-webkit-input-placeholder {
-    transition: opacity 0.1s 0.1s ease; 
-    opacity: 40%;
-  }
 
 ul li {
     list-style: none;
-    font-size: 18px; /* Adjusted font size */
+    font-size: 18px; 
     font-weight: 500;
     letter-spacing: 1px;
-    padding: 10px 8px 10px 40px; /* Adjusted padding */
+    padding: 10px 8px 10px 40px; 
     user-select: none;
     cursor: pointer;
     position: relative;
-    margin: 8px 0; /* Adjusted margin */
+    margin: 8px 0; 
 }
 
 ul li::before {
     content: '';
     position: absolute;
-    height: 24px; /* Adjusted size */
+    height: 24px; 
     width: 24px;
     border-radius: 50%;
     background: url(images/unchecked.png);
     background-size: cover;
-    top: 10px; /* Adjusted positioning */
+    top: 10px;  
     left: 8px;
 }
 
 ul li.checked {
     background-color: #c96ce3;
     color: #fff;
-    border-radius: 20px; /* Adjusted border radius */
+    border-radius: 20px; 
 }
 
 ul li.checked::before {
@@ -124,11 +125,11 @@ ul li.checked::before {
 
 ul li span {
     position: absolute;
-    top: 5px; /* Adjusted positioning */
-    right: 5px; /* Adjusted positioning */
-    width: 24px; /* Adjusted size */
+    top: 5px; 
+    right: 5px; 
+    width: 24px; 
     line-height: 24px;
-    font-size: 24px; /* Adjusted font size */
+    font-size: 24px; 
     text-align: center;
     border-radius: 50%;
     cursor: pointer;
@@ -138,6 +139,17 @@ ul li span:hover {
     background: #ffffff;
     color: #010101;
 }
+
+ul li .date {
+    font-size: 14px; 
+    font-weight: 400;
+    color: #666; 
+    margin-left: 30px;
+    margin-right: 10px;
+    position: relative;
+}
+
+
 
 @media (max-width: 600px) {
     .ToDo-app {
@@ -168,3 +180,7 @@ ul li span:hover {
         font-size: 20px;
     }
 }
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.1s 0.1s ease; 
+    opacity: 40%;
+  }
