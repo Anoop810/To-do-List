@@ -8,12 +8,18 @@ function addTask(){
     else{
         let task=document.createElement('li')
         task.textContent=inputBox.value
+
+        let dateSpan = document.createElement('span');
+        dateSpan.classList.add('date');
+        dateSpan.textContent = new Date().toLocaleString();
+        task.appendChild(dateSpan);
         listContainer.appendChild(task)
         let span=document.createElement('span')
         span.textContent='\u00d7';
         task.appendChild(span)
+        inputBox.value=''
     }
-    inputBox.value=''
+    
     saveData()
 
 }
@@ -26,6 +32,7 @@ listContainer.addEventListener('click',(el)=>{
     }
     else if(el.target.tagName=='SPAN'){
         el.target.parentElement.remove()
+        saveData()
     }
 })
 
