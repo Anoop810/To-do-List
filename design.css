@@ -82,6 +82,10 @@ button:hover {
 input::placeholder {
     color: #8a1ea9;
 }
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 0.1s 0.1s ease; 
+    opacity: 40%;
+  }
 
 ul li {
     list-style: none;
